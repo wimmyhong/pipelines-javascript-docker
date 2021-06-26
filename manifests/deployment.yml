@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: wimmyhongpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wimmyhongpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: wimmyhongpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: wimmyhongpipelinesjavascriptdocker 
+          image: acrtestwh.azurecr.io/wimmyhongpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
